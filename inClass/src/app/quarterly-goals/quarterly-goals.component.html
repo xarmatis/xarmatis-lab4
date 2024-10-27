@@ -1,0 +1,27 @@
+<div class="container">
+    <header>
+        <div class="top">
+            <h1>Quarterly Goals</h1>
+            <img src="../../assets/pencil.svg" alt="Pencil image" width="20" height="20">
+        </div>
+        <p class="fall2020">Fall 2020</p>
+    </header>
+
+    <section class="goals" id="goals">
+        <div *ngFor="let goal of goals" class="goal">
+            <div class="check">
+                <img src="../../assets/checkbox.svg" alt="Check-box" width="21.04" height="21.06">
+                <h2>{{ goal.title }}</h2>
+            </div>
+            <div class="goal-info">
+                <p class="hash">{{ goal.hash }}</p>
+                <p class="progress">{{ goal.progress }}</p>
+            </div>
+            <hr>
+        </div>
+    </section>
+
+    <footer>
+        <p class="add-goal" (click)="addGoal()" style="cursor: pointer;">+ Add a quarter goal</p>
+    </footer>
+</div>

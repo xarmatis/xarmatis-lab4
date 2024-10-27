@@ -17,7 +17,7 @@ export class DateTimeComponent implements OnDestroy{
   private intervalId: any;
 
   constructor(private appRef: ApplicationRef, private cdr: ChangeDetectorRef) {
-    // Subscribe to the stable event of the application
+  
     this.appRef.isStable.subscribe(isStable => {
       if (isStable) {
         this.startUpdatingTime();
@@ -26,15 +26,15 @@ export class DateTimeComponent implements OnDestroy{
   }
 
   private startUpdatingTime(): void {
-    this.updateDateTime(); // Initial call to set the time and date
+    this.updateDateTime(); 
     this.intervalId = setInterval(() => {
       this.updateDateTime();
-      this.cdr.detectChanges(); // Trigger change detection manually
-    }, 1000); // Update every second
+      this.cdr.detectChanges(); 
+    }, 1000); 
   }
 
   ngOnDestroy(): void {
-    clearInterval(this.intervalId); // Clear the interval when the component is destroyed
+    clearInterval(this.intervalId); 
   }
 
   private updateDateTime(): void {
