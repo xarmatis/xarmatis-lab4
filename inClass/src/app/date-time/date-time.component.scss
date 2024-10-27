@@ -1,0 +1,140 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 90%; 
+    height: auto;
+    max-width: 185px; 
+    align-items: right;
+}
+
+.container .top {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: right;
+    /*margin-right: 1%; */
+}
+
+.container .bottom {
+    display: flex;
+    justify-content: flex-end;
+    align-self:flex-end;
+    width: 100%;
+    
+}
+
+.container .top .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: right;
+    margin-right: 0%;
+    margin-bottom: 5px;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.time {
+    display: flex;
+    font-size: 4vw; 
+    font-family: 'Oxygen', sans-serif;
+    margin-right: 5%;
+    color: rgb(45, 189, 177);
+    font-weight: 400;
+    justify-content: flex-end;
+    align-self: flex-end;
+    width: 70%; 
+    height: auto;
+}
+
+.am {
+    width: auto;
+    height: auto;
+    padding-top: 10px;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 400;
+    font-size: 1.5vw; 
+    color: rgb(45, 189, 177);
+}
+
+.secs {
+    width: auto;
+    height: auto;
+    letter-spacing: 0.3em;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 400;
+    font-size: 1.5vw;
+    color: rgb(45, 189, 177);
+}
+
+.date {
+    width: 100%; 
+    height: auto;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 400;
+    font-size: 3vw;
+    color: rgb(75, 88, 83);
+    text-align: right;
+}
+
+
+@media (min-width: 600px) and (max-width: 1000px) {
+    .container{
+
+        /*max-width: 240px;*/
+        width: 100%;
+        
+    }
+    .top{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+    .bottom{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+    .time {
+        font-size: 3vw;
+    }
+
+    .am, .secs {
+        font-size: 1.2vw;
+    }
+
+    .date {
+        font-size: 2.5vw;
+    }
+    
+}
+
+
+@media (min-width: 1000px) {
+    .container {
+        max-width: 400px;
+        
+    }
+
+    .bottom {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .time {
+        font-size: 2.5vw;
+    }
+
+    .am, .secs {
+        font-size: 1vw;
+    }
+
+    .date {
+        font-size: 2vw;
+    }
+}
